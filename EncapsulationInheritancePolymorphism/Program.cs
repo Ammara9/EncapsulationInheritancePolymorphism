@@ -44,10 +44,14 @@ namespace EncapsulationInheritancePolymorphism
                 // Set properties of the person using PersonHandler's methods.
                 persHandler.SetAge(pers, 30); // Set the person's age to 30 using SetAge method.
                 persHandler.SetFName(pers, "Ammara"); // Set the person's first name to "Ammara".
-                //persHandler.GetWeight(pers);       // Optionally get the weight of the person.
+                persHandler.SetLName(pers, "Shakeel");
+                persHandler.SetWeight(pers, 64);
+                persHandler.SetHeight(pers, 165);
 
                 // Output the details of the person after setting properties.
-                Console.WriteLine($"Person's age: {pers.Age} {pers.FirstName} {pers.Weight}");
+                Console.WriteLine(
+                    $"Person's age: {pers.Age} name: {pers.FirstName} {pers.LastName} weight: {pers.Weight} height: {pers.Height}"
+                );
             }
             catch (ArgumentException ex)
             {
